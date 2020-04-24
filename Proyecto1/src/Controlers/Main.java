@@ -31,13 +31,13 @@ public class Main {
 			break;
 
 		case 2:
-			Helpers.vendido(juegos.get(menuSecundario()), tienda);
+			Helpers.vendido(tienda.getJuegos().get(menuSecundario()), tienda);
 			break;
 		case 3:
 			System.out.println(tienda.toString());
 			break;
 		case 4:
-			Helpers.recomprar(juegos.get(menuSecundario()), tienda);
+			Helpers.recomprar(tienda.getJuegos().get(menuSecundario()), tienda);
 			System.out.println("Haz comprado un juego del seleccionado");
 		case 0:
 			System.out.println("Adios");

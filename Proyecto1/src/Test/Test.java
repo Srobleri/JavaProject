@@ -13,10 +13,11 @@ class Test {
 	void testVendidos() {
 		Tienda tienda=new Tienda();
 		ArrayList<Juegos> juego=new ArrayList<Juegos>();
-		juego.add(new Juegos("Juego1",2000,"plataforma1",1));
+		juego.add(new Juegos("Juego1",2000,"plataforma1",10));
 		tienda.setJuegos(juego);
-		Helpers.vendido(new Juegos("Juego1",2000,"plataforma1",1),tienda);
-		fail("Not yet implemented");
+		Helpers.vendido(tienda.getJuegos().get(0),tienda);
+		assertEquals(9, juego.get(0).getCantidad());
+		assertEquals(1, tienda.getVendidos());
 	}
 	
 	@org.junit.jupiter.api.Test
@@ -26,7 +27,7 @@ class Test {
 		juego.add(new Juegos("Juego1",2000,"plataforma1",1));
 		tienda.setJuegos(juego);
 		Helpers.recomprar(juego.get(0), tienda);
-		fail("Not yet implemented");
+		assertEquals(2, tienda.getJuegos().get(0).getCantidad());
 	}
 	
 	

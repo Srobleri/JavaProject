@@ -19,7 +19,7 @@ public class Main {
 	}
 
 	public static void menuPrincipal() {
-		System.out.println("1.- Añadir juegos por defecto\n" + "2.- Vender juego\n" + "3.- Ver datos\n" + "0.- Salir\n"
+		System.out.println("1.- Añadir juegos por defecto al registro\n" + "2.- Vender juego\n" + "3.- Ver datos\n" + "0.- Salir\n"
 				+ "Elija entre las opciones:");
 		Scanner src = new Scanner(System.in);
 		select = src.nextInt();

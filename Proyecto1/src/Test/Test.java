@@ -18,5 +18,17 @@ class Test {
 		tienda.setJuegos(juego);
 		Helpers.vendido(new Juegos("Juego1",2000,"plataforma1",1),tienda);
 	}
+	
+	@org.junit.jupiter.api.Test
+	void testComprados() {
+		fail("Not yet implemented");
+		Tienda tienda=new Tienda();
+		ArrayList<Juegos> juego=new ArrayList<Juegos>();
+		juego.add(new Juegos("Juego1",2000,"plataforma1",1));
+		tienda.setJuegos(juego);
+		Helpers.recomprar(juego.get(0), tienda);
+	}
+	
+	
 
 }
